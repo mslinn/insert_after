@@ -59,7 +59,8 @@ The `demo/demo.rb` program is an example of how to use `insert_after` in a Ruby 
 ```ruby
 require 'insert_after'
 
-InsertAfer.insert_after 'line 2', 'New line', 'my_file.txt'
+InsertAfer.insert_after  'line 2', 'New line',               'my_file.txt'
+InsertAfter.insert_after 'line',   'Another line from Ruby', 'my_file.txt', all: true
 ```
 
 
