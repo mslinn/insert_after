@@ -27,7 +27,7 @@ module InsertAfter
 
       Ruby usage:
         require 'insert_after'
-        insert_after 'line 2' 'New line' 'demo/my_file.txt'
+        InsertAfter.insert_after 'line 2' 'New line' 'demo/my_file.txt'
     END_MSG
     exit 1
   end

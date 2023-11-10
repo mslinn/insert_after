@@ -49,10 +49,12 @@ $ insert_after 'e.*2' 'Inserted 3' demo/my_file.txt
 
 ## Ruby Program Usage
 
+The `demo/demo.rb` program is an example of how to use `insert_after` in a Ruby program:
+
 ```ruby
 require 'insert_after'
 
-insert_after 'line 2' 'New line' 'demo/my_file.txt'
+insert_after 'line 2', 'New line', 'my_file.txt'
 ```
 
 
