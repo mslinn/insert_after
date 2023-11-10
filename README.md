@@ -1,6 +1,6 @@
 # `Insert_after` [![Gem Version](https://badge.fury.io/rb/insert_after.svg)](https://badge.fury.io/rb/insert_after)
 
-Description of InsertAfter
+Inserts a line in a file after a regex match.
 
 
 ## Installation
@@ -26,8 +26,9 @@ $ bundle
 
 ## Usage
 
-Describe how to use this gem
-
+```shell
+$ insert_after /regex/ 'This is the inserted line'
+```
 
 ## Development
 
