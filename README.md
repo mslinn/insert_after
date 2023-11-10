@@ -41,14 +41,26 @@ $ bundle
 # Inserts 'Inserted 1' after the first line containing 'line' into demo/my_file.txt:
 $ insert_after line 'Inserted 1' demo/my_file.txt
 
+# Inserts 'Inserted 1' after every line containing 'line' into demo/my_file.txt:
+$ insert_after -a line 'Inserted 1' demo/my_file.txt
+
 # Inserts an empty line after the first line containing 'line 1' into demo/my_file.txt:
 $ insert_after 'line 1' '' demo/my_file.txt
+
+# Inserts an empty line after every line containing 'line 1' into demo/my_file.txt:
+$ insert_after -a 'line 1' '' demo/my_file.txt
 
 # Inserts 'Inserted 2' after the first line starting with 'line 2' into demo/my_file.txt:
 $ insert_after '^line 2' 'Inserted 2' demo/my_file.txt
 
+# Inserts 'Inserted 2' after every line starting with 'line 2' into demo/my_file.txt:
+$ insert_after -a '^line 2' 'Inserted 2' demo/my_file.txt
+
 # Inserts 'Inserted 3' after the first line containing an 'e' followed by a '2' into demo/my_file.txt:
 $ insert_after 'e.*2' 'Inserted 3' demo/my_file.txt
+
+# Inserts 'Inserted 3' after every line containing an 'e' followed by a '2' into demo/my_file.txt:
+$ insert_after -a 'e.*2' 'Inserted 3' demo/my_file.txt
 ```
 
 
