@@ -9,15 +9,20 @@ Can be used on the command line or in a Ruby program.
 
 ## Command-line Installation
 
+```ruby
+$ gem install insert_after
+```
+
+
+## Installation For Use In a Ruby Program
+
 Either add this line to your application&rsquo;s `Gemfile`:
 
 ```ruby
 gem 'insert_after'
 ```
 
-## Installation For Use In a Ruby Program
-
-Add the following to your application&rsquo;s `.gemspec`:
+... or add the following to your application&rsquo;s `.gemspec`:
 
 ```ruby
 spec.add_dependency 'insert_after'
@@ -54,7 +59,7 @@ The `demo/demo.rb` program is an example of how to use `insert_after` in a Ruby 
 ```ruby
 require 'insert_after'
 
-insert_after 'line 2', 'New line', 'my_file.txt'
+InsertAfer.insert_after 'line 2', 'New line', 'my_file.txt'
 ```
 
 
