@@ -1,9 +1,13 @@
 # `Insert_after` [![Gem Version](https://badge.fury.io/rb/insert_after.svg)](https://badge.fury.io/rb/insert_after)
 
-Inserts a line in a file after a regex match.
+Inserts a line into a file after a line matching a regular expression.
+String comparisons are case-insensitive.
+Works on very large files because it reads the file line by line instead of reading the entire file into memory.
+
+Can be used on the command line or in a Ruby program.
 
 
-## Installation
+## Command-line Installation
 
 Either add this line to your application&rsquo;s `Gemfile`:
 
@@ -11,7 +15,9 @@ Either add this line to your application&rsquo;s `Gemfile`:
 gem 'insert_after'
 ```
 
-... or add the following to your application&rsquo;s `.gemspec`:
+## Installation For Use In a Ruby Program
+
+Add the following to your application&rsquo;s `.gemspec`:
 
 ```ruby
 spec.add_dependency 'insert_after'
@@ -24,11 +30,31 @@ $ bundle
 ```
 
 
-## Usage
+## Command-line Usage
 
 ```shell
-$ insert_after /regex/ 'This is the inserted line'
+# Inserts 'Inserted 1' after the first line containing 'line' into demo/my_file.txt:
+$ insert_after line 'Inserted 1' demo/my_file.txt
+
+# Inserts an empty line after the first line containing 'line 1' into demo/my_file.txt:
+$ insert_after 'line 1' '' demo/my_file.txt
+
+# Inserts 'Inserted 2' after the first line starting with 'line 2' into demo/my_file.txt:
+$ insert_after '^line 2' 'Inserted 2' demo/my_file.txt
+
+# Inserts 'Inserted 3' after the first line containing an 'e' followed by a '2' into demo/my_file.txt:
+$ insert_after 'e.*2' 'Inserted 3' demo/my_file.txt
 ```
+
+
+## Ruby Program Usage
+
+```ruby
+require 'insert_after'
+
+insert_after 'line 2' 'New line' 'demo/my_file.txt'
+```
+
 
 ## Development
 
@@ -44,7 +70,7 @@ You should do the above before running Visual Studio Code.
 ### Run the Tests
 
 ```shell
-$ bundle exec rake test
+$ bundle exec rspec
 ```
 
 
