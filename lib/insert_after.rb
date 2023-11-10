@@ -80,9 +80,9 @@ module InsertAfter
     InsertAfter.help 'No file name was provided' if argv.length == 2
     InsertAfter.help 'Too many arguments' if argv.length > 3
     regex    = argv[0].downcase
-    new_line = argv[1]
+    new_line = argv[1].gsub('\n', "\n").gsub('\r', "\r").gsub('\t', "\t")
     filename = argv[2]
-    InsertAfter.insert_after(regex, new_line, filename, all)
+    InsertAfter.insert_after(regex, new_line, filename, all: all)
   end
 end
 

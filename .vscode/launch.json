@@ -5,8 +5,8 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Run selected Ruby file",
-      "program": "ruby ${file}",
+      "name": "Run insert_after Ruby file",
+      "program": "insert_after 'Line 2' '\nA new line\nAnother new line' demo/my_file.txt",
       "request": "launch",
       "type": "ruby_lsp"
     },
