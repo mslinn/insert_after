@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.3.1 (in progress)
+
+* Added spec.platform to `insert_after.gemspec` because `RubyGems.org` now requires it
+
+
 ## 0.3.0
 
 * Handles replacement strings containing escapes, like \n, \r and \t.
